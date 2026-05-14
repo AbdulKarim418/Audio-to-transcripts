@@ -1,7 +1,6 @@
 # 🎙️ Speech-to-Text Transcription with OpenAI Whisper
 
-A simple Python script that transcribes audio files into text using [OpenAI Whisper](https://github.com/openai/whisper) — a state-of-the-art, open-source speech recognition model that runs **locally** (no API key needed).
-
+A simple Python script that transcribes audio files into text using OpenAI Whisper open-source speech recognition model that runs locally.
 ---
 
 ## 📋 What It Does
@@ -20,10 +19,7 @@ A simple Python script that transcribes audio files into text using [OpenAI Whis
 ```
 volgaparnters/
 ├── stt.py              # Main transcription script
-├── transcript.txt      # Output: plain text transcript
-├── transcript.json     # Output: timestamped transcript (JSON)
-├── README.md           # This file
-└── venv/               # Python virtual environment
+├── README.md           
 ```
 
 ---
@@ -31,37 +27,14 @@ volgaparnters/
 ## ⚙️ Requirements
 
 - Python 3.8+
-- [FFmpeg](https://ffmpeg.org/download.html) (for audio format conversion)
+- [FFmpeg] (for audio format conversion)
 - OpenAI Whisper
 
 ---
 
-## 🚀 Setup & Installation
-
-### 1. Clone the repository
-```bash
-git clone https://github.com/<your-username>/volgaparnters.git
-cd volgaparnters
-```
-
-### 2. Create and activate a virtual environment
-```bash
-python -m venv venv
-
-# Windows
-venv\Scripts\activate
-
-# macOS/Linux
-source venv/bin/activate
-```
-
-### 3. Install dependencies
-```bash
+###  Install dependencies
 pip install openai-whisper
-```
-
-> **Note:** FFmpeg must also be installed on your system. On Windows, you can use `winget install ffmpeg` or download it from the [official site](https://ffmpeg.org/download.html).
-
+> **Note:** FFmpeg must also be installed on your system.
 ---
 
 ## ▶️ Usage
@@ -104,27 +77,6 @@ Step 6: Saving results...
 Done!
 ```
 
----
-
-## 🤖 Whisper Model Sizes
-
-You can change the model in `stt.py` to trade off between speed and accuracy:
-
-| Model  | Speed   | Accuracy | VRAM   |
-|--------|---------|----------|--------|
-| tiny   | Fastest | Lower    | ~1 GB  |
-| base   | Fast    | Good     | ~1 GB  |
-| small  | Medium  | Better   | ~2 GB  |
-| medium | Slow    | Great    | ~5 GB  |
-| large  | Slowest | Best     | ~10 GB |
-
-To change the model, edit this line in `stt.py`:
-```python
-model = whisper.load_model("base")  # Change "base" to any model name above
-```
-
----
-
 ## 📄 Output Files
 
 ### `transcript.txt`
@@ -145,9 +97,3 @@ Structured JSON with timestamps:
     ]
 }
 ```
-
----
-
-## 📝 License
-
-This project is open source and available under the [MIT License](LICENSE).

@@ -1,0 +1,22 @@
+# Virtual environment
+venv/
+
+# Audio files (large binary files)
+*.wav
+*.mp3
+*.m4a
+*.flac
+*.ogg
+*.mp4
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Whisper model cache
+~/.cache/whisper/
